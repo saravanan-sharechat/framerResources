@@ -2,6 +2,17 @@ import * as React from "react";
 
 const icons = [
 	{
+		name: "Arrow Right",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
+				<g fill='none' stroke='inherit' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<path d='m.75 12h22.5' />
+					<path d='m12.75 22.5 10.5-10.5-10.5-10.5' />
+				</g>
+			</svg>
+		),
+	},
+	{
 		name: "Backspace",
 		svg: (
 			<svg xmlns='http://www.w3.org/2000/svg' overflow='visible' viewBox='0 0 24 24'>
@@ -51,14 +62,12 @@ const icons = [
 	{
 		name: "Filters",
 		svg: (
-			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
-				<path
-					d='M16.961 12.747l.887-1.441a1.023 1.023 0 0 0-.871-1.559H13.5v-9L10.269 6m-3.23 5.247l-.887 1.442a1.022 1.022 0 0 0 .871 1.558H10.5v9L13.731 18M2.25 2.247l19.5 19.5'
-					fill='none'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					stroke-width='2'
-				/>
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<path d='M7.4 10.9C6.5 9.8 6 8.5 6 7c0-3.3 2.7-6 6-6s6 2.7 6 6c0 1.4-.5 2.7-1.3 3.8' />
+					<path d='M12 20.1c-1.1 1.7-2.9 2.7-5 2.7-3.3 0-6-2.7-6-6s2.7-6 6-6c2.1 0 3.9 1 5 2.6' />
+					<circle cx='17' cy='16.8' r='6' />
+				</g>
 			</svg>
 		),
 	},
@@ -207,10 +216,10 @@ const icons = [
 	{
 		name: "Swap",
 		svg: (
-			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
 				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
 					<path d='M23.2 15.8v4.5c0 1.6-1.4 3-3 3H9.7c-1.6 0-3-1.4-3-3v-4.5zM6 18.8c-1.7 0-3-1.3-3-3v-4.5' />
-					<path d='M.8 13.5L3 11.2l2.2 2.2M.8 8.2V3.7c0-1.7 1.4-3 3-3h10.5c1.6 0 3 1.3 3 3v4.5zm34.4-6c1.7 0 3 1.3 3 3v4.5m-15 .8L21 12.8l-2.2-2.2' />
+					<path d='M.8 13.5L3 11.2l2.2 2.2M.8 8.2V3.7c0-1.7 1.4-3 3-3h10.5c1.6 0 3 1.3 3 3v4.5zm17.2-4c1.7 0 3 1.3 3 3v4.5m2.2-1.2L21 12.8l-2.2-2.2' />
 				</g>
 			</svg>
 		),
@@ -226,6 +235,43 @@ const icons = [
 					fill='none'
 					stroke-linejoin='round'
 				/>
+			</svg>
+		),
+	},
+	{
+		name: "Time 15",
+		svg: (
+			<svg enable-background='new 0 0 24 24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<circle cx='12' cy='12' r='11.2' />
+					<path d='m16.5 9h-3v2.2c0 .4.3.8.8.8h.7c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5h-1.5' />
+					<path d='m7.4 9h1.6v6h-1.6 3.1' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Time 30",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<path d='m16.5 13.5a1.5 1.5 0 0 1 -3 0v-3a1.5 1.5 0 0 1 3 0z' />
+					<circle cx='12' cy='12' r='11.25' />
+					<path d='m7.551 10.112a1.5 1.5 0 1 1 1.449 1.888 1.5 1.5 0 1 1 -1.445 1.9' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Time 60",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<path d='m9.75 9a2.25 2.25 0 0 0 -2.25 2.25v2.25' />
+					<circle cx='9' cy='13.5' r='1.5' />
+					<path d='m16.5 13.5a1.5 1.5 0 0 1 -3 0v-3a1.5 1.5 0 0 1 3 0z' />
+					<circle cx='12' cy='12' r='11.25' />
+				</g>
 			</svg>
 		),
 	},
