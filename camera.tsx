@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Frame, addPropertyControls, ControlType } from "framer";
 
-const icons = [
+const iconsList = [
 	{
 		name: "Add",
 		svg: (
@@ -10,6 +11,20 @@ const icons = [
 					<path d='m7.5 12h9' />
 					<circle cx='12' cy='12' r='11.25' />
 				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Keyboard",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<path
+					d='M3.8 4h16.5c1.7 0 3 1.8 3 4v8c0 2.2-1.3 4-3 4H3.8c-1.7 0-3-1.8-3-4V8c0-2.2 1.3-4 3-4zm3 6.7h1.5m7.5 0h1.5m-6.1 0h1.5m-8.2 3H6m3 0h1.5m3 0H15m3 0h1.5m-15-6.1H6m3 0h1.5m3 0H15m3 0h1.5M6.8 16.7h10.5'
+					fill='none'
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					stroke-width='1.5'
+				/>
 			</svg>
 		),
 	},
@@ -57,11 +72,8 @@ const icons = [
 	{
 		name: "Close",
 		svg: (
-			<svg enable-background='new 0 0 24 24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
-					<path d='m2 22 20-20' />
-					<path d='m22 22-20-20' />
-				</g>
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<path d='M3 21L21 3m0 18L3 3' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' />
 			</svg>
 		),
 	},
@@ -501,7 +513,7 @@ const icons = [
 	},
 ];
 
-const iconsSorted = icons.sort(function (a, b) {
+const icons = iconsList.sort(function (a, b) {
 	var nameA = a.name.toLowerCase(),
 		nameB = b.name.toLowerCase();
 	if (nameA < nameB)
@@ -511,4 +523,53 @@ const iconsSorted = icons.sort(function (a, b) {
 	return 0; //default return value (no sorting)
 });
 
-export default iconsSorted;
+// Enumerate Icon Names
+var iconNames = [];
+for (var index = 0; index < icons.length; index++) {
+	iconNames.push(icons[index]["name"]);
+}
+
+// Export Component
+export function Icons(props) {
+	let { name, tint, svg, ...rest } = props;
+
+	icons.map((icon) => {
+		if (icon.name == props.name) {
+			svg = icon.svg;
+		}
+	});
+
+	return (
+		<div
+			style={{
+				stroke: tint,
+				fill: tint,
+				filter: "drop-shadow(0 0 2px rgba(0,0,0,0.2)",
+			}}>
+			{svg}
+		</div>
+	);
+}
+
+// Default Props
+Icons.defaultProps = {
+	height: 28,
+	width: 28,
+	name: icons[0].name,
+	tint: "#FFFFFF",
+	svg: icons[0].svg,
+};
+
+// Property Controls
+addPropertyControls(Icons, {
+	name: {
+		title: "Icon",
+		type: ControlType.Enum,
+		options: iconNames,
+	},
+	tint: {
+		title: "Tint",
+		type: ControlType.Color,
+		defaultValue: "#FFFFFF",
+	},
+});
