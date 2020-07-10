@@ -385,6 +385,20 @@ const icons = [
 		),
 	},
 	{
+		name: "Undo",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<path
+					d='M.75.748v7.5h7.5m3.75 15a11.25 11.25 0 1 0-10.6-15'
+					fill='none'
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					stroke-width='1.5'
+				/>
+			</svg>
+		),
+	},
+	{
 		name: "Wand Off",
 		svg: (
 			<svg enable-background='new 0 0 24 24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
