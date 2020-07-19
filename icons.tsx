@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Frame, addPropertyControls, ControlType } from "framer";
 
-const icons = [
+const iconsList = [
 	{
 		name: "Add Circle Bold",
 		svg: (
@@ -36,10 +37,57 @@ const icons = [
 		),
 	},
 	{
+		name: "Arrow Right Alt",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
+				<path
+					d='m5.5.75 10.72 10.72a.749.749 0 0 1 0 1.06l-10.72 10.72'
+					fill='none'
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					stroke-width='3'
+				/>
+			</svg>
+		),
+	},
+	{
+		name: "Search",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'>
+					<circle cx='9.813' cy='9.812' r='9.063' transform='matrix(.920334 -.391133 .391133 .920334 -3.056 4.62)' />
+					<path d='m16.22 16.22 7.03 7.03' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Music",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'>
+					<circle cx='4.5' cy='19.5' r='3.75' />
+					<circle cx='19.5' cy='15' r='3.75' />
+					<path d='m8.25 19.5v-12.781a3 3 0 0 1 2.05-2.846l11.048-3.068a1.5 1.5 0 0 1 1.9 1.445v12.75m-14.998-6.281 15-4.5' />
+				</g>
+			</svg>
+		),
+	},
+	{
 		name: "Close",
 		svg: (
 			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
 				<path d='M3 21L21 3m0 18L3 3' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' />
+			</svg>
+		),
+	},
+	{
+		name: "Delete",
+		svg: (
+			<svg viewBox='0 0 24 24' overflow='visible' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'>
+					<path d='M17.25 21H6.75a1.5 1.5 0 0 1-1.5-1.5V6h13.5v13.5a1.5 1.5 0 0 1-1.5 1.5zm-7.5-4.5v-6m4.5 6v-6M2.25 6h19.5m-7.5-3h-4.5a1.5 1.5 0 0 0-1.5 1.5V6h7.5V4.5a1.5 1.5 0 0 0-1.5-1.5z' />
+				</g>
 			</svg>
 		),
 	},
@@ -70,6 +118,16 @@ const icons = [
 	},
 	{
 		name: "Comments",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'>
+					<path d='M21.75 18.75h-10.5l-6 4.5v-4.5h-3a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h19.5a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-1.5 1.5zM5.25 7.5h13.5M5.25 12h10.5' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Comments Bold",
 		svg: (
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
 				<path
@@ -186,6 +244,33 @@ const icons = [
 		),
 	},
 	{
+		name: "Pause",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
+				<g stroke='none'>
+					<path d='m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 21.55a9.551 9.551 0 1 1 9.551-9.55 9.562 9.562 0 0 1 -9.551 9.55z' />
+					<rect height='10.776' rx='.98' width='3.401' x='7.851' y='7.142' />
+					<rect height='10.776' rx='.98' width='3.456' x='12.721' y='7.101' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Play",
+		svg: (
+			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' overflow='visible'>
+				<path
+					stroke='none'
+					d='M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm0 21.43A9.43 9.43 0 1 1 21.429 12 9.44 9.44 0 0 1 12 21.429z'
+				/>
+				<path
+					stroke='none'
+					d='M16.609 10.712l-5.926-2.963a1.488 1.488 0 0 0-2.224 1.373v5.754a1.532 1.532 0 0 0 .7 1.348 1.44 1.44 0 0 0 .759.214 1.709 1.709 0 0 0 .761-.188l5.926-2.963a1.386 1.386 0 0 0 0-2.575z'
+				/>
+			</svg>
+		),
+	},
+	{
 		name: "Privacy",
 		svg: (
 			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -266,7 +351,7 @@ const icons = [
 	},
 ];
 
-const iconsSorted = icons.sort(function (a, b) {
+const icons = iconsList.sort(function (a, b) {
 	var nameA = a.name.toLowerCase(),
 		nameB = b.name.toLowerCase();
 	if (nameA < nameB)
@@ -276,4 +361,44 @@ const iconsSorted = icons.sort(function (a, b) {
 	return 0; //default return value (no sorting)
 });
 
-export default iconsSorted;
+// Enumerate Icon Names
+var iconNames = [];
+for (var index = 0; index < icons.length; index++) {
+	iconNames.push(icons[index]["name"]);
+}
+
+// Export Component
+export function Icons(props) {
+	let { name, tint, svg, ...rest } = props;
+
+	icons.map((icon) => {
+		if (icon.name == props.name) {
+			svg = icon.svg;
+		}
+	});
+
+	return <div style={{ stroke: tint, fill: tint }}>{svg}</div>;
+}
+
+// Default Props
+Icons.defaultProps = {
+	height: 24,
+	width: 24,
+	name: icons[0].name,
+	tint: "#D7D7D8",
+	svg: icons[0].svg,
+};
+
+// Property Controls
+addPropertyControls(Icons, {
+	name: {
+		title: "Icon",
+		type: ControlType.Enum,
+		options: iconNames,
+	},
+	tint: {
+		title: "Tint",
+		type: ControlType.Color,
+		defaultValue: "#D7D7D8",
+	},
+});
