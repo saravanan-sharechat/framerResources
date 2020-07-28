@@ -3,6 +3,44 @@ import { Frame, addPropertyControls, ControlType } from "framer";
 
 const iconsList = [
 	{
+		name: "Download",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
+					<path d='m8.25 14.25 3.75 3.75 3.75-3.75' />
+					<path d='m12 6.75v11.25' />
+					<circle cx='12' cy='12' r='11.25' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Like",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<path
+					d='m12 21.844-9.588-10a5.672 5.672 0 0 1 -1.063-6.551 5.673 5.673 0 0 1 9.085-1.474l1.566 1.565 1.566-1.565a5.673 5.673 0 0 1 9.085 1.474 5.673 5.673 0 0 1 -1.062 6.548z'
+					fill='none'
+					stroke='inherit'
+					stroke-linecap='round'
+					stroke-linejoin='round'
+					stroke-width='1.5'
+				/>
+			</svg>
+		),
+	},
+	{
+		name: "Search",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'>
+					<circle cx='9.813' cy='9.812' r='9.063' transform='matrix(.920334 -.391133 .391133 .920334 -3.056 4.62)' />
+					<path d='m16.22 16.22 7.03 7.03' />
+				</g>
+			</svg>
+		),
+	},
+	{
 		name: "Add",
 		svg: (
 			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -10,6 +48,33 @@ const iconsList = [
 					<path d='m12 7.5v9' />
 					<path d='m7.5 12h9' />
 					<circle cx='12' cy='12' r='11.25' />
+				</g>
+			</svg>
+		),
+	},
+	{
+		name: "Play",
+		svg: (
+			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' overflow='visible'>
+				<path
+					stroke='none'
+					d='M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm0 21.43A9.43 9.43 0 1 1 21.429 12 9.44 9.44 0 0 1 12 21.429z'
+				/>
+				<path
+					stroke='none'
+					d='M16.609 10.712l-5.926-2.963a1.488 1.488 0 0 0-2.224 1.373v5.754a1.532 1.532 0 0 0 .7 1.348 1.44 1.44 0 0 0 .759.214 1.709 1.709 0 0 0 .761-.188l5.926-2.963a1.386 1.386 0 0 0 0-2.575z'
+				/>
+			</svg>
+		),
+	},
+	{
+		name: "Pause",
+		svg: (
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
+				<g stroke='none'>
+					<path d='m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 21.55a9.551 9.551 0 1 1 9.551-9.55 9.562 9.562 0 0 1 -9.551 9.55z' />
+					<rect height='10.776' rx='.98' width='3.401' x='7.851' y='7.142' />
+					<rect height='10.776' rx='.98' width='3.456' x='12.721' y='7.101' />
 				</g>
 			</svg>
 		),
@@ -23,7 +88,7 @@ const iconsList = [
 					fill='none'
 					stroke-linecap='round'
 					stroke-linejoin='round'
-					stroke-width='1.5'
+					stroke-width='2'
 				/>
 			</svg>
 		),
@@ -102,23 +167,11 @@ const iconsList = [
 	{
 		name: "Effects",
 		svg: (
-			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' overflow='visible'>
-				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
-					<path d='m17.729 23.25 4.671-8.763a.827.827 0 0 0 -.34-1.12l-1.46-.779a.829.829 0 0 0 -1.12.341l-5.5 10.321' />
-					<path d='m20.845 17.408-2.921-1.558' />
-					<path d='m14.25 12v3' />
-					<path d='m15.75 13.5h-3' />
-					<path d='m21.75 6v3' />
-					<path d='m23.25 7.5h-3' />
-					<path d='m.75 5.25h4.5' />
-					<path d='m18.75 5.25h-4.5' />
-					<path d='m9.75 23.25h-7.5a1.5 1.5 0 0 1 -1.5-1.5v-19.5a1.5 1.5 0 0 1 1.5-1.5h15a1.5 1.5 0 0 1 1.5 1.5v3' />
-					<path d='m5.25 23.25v-9' />
-					<path d='m14.25 9.75v-9' />
-					<path d='m5.25 9.75v-9' />
-					<path d='m.75 18.75h4.5' />
-					<path d='m.75 14.25h9' />
-					<path d='m.75 9.75h18' />
+			<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+				<g stroke-linecap='round' stroke-width='2' fill='none' stroke-linejoin='round'>
+					<circle cx='15.749' cy='12.411' r='7.5' />
+					<path d='M7.3 19.862c-4.326-4.161-4.46-11.04-.299-15.367.126-.13.255-.258.387-.382' />
+					<path d='M3.14 19.833a13.942 13.942 0 0 1 .092-15.744' />
 				</g>
 			</svg>
 		),
@@ -398,47 +451,6 @@ const iconsList = [
 					fill='none'
 					stroke-linejoin='round'
 				/>
-			</svg>
-		),
-	},
-	{
-		name: "Time 15",
-		svg: (
-			<svg
-				enable-background='new 0 0 24 24'
-				viewBox='0 0 24 24'
-				xmlns='http://www\.w3\.org/2000/svg'
-				overflow='visible'>
-				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
-					<circle cx='12' cy='12' r='11.2' />
-					<path d='m16.5 9h-3v2.2c0 .4.3.8.8.8h.7c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5h-1.5' />
-					<path d='m7.4 9h1.6v6h-1.6 3.1' />
-				</g>
-			</svg>
-		),
-	},
-	{
-		name: "Time 30",
-		svg: (
-			<svg viewBox='0 0 24 24' xmlns='http://www\.w3\.org/2000/svg' overflow='visible'>
-				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
-					<path d='m16.5 13.5a1.5 1.5 0 0 1 -3 0v-3a1.5 1.5 0 0 1 3 0z' />
-					<circle cx='12' cy='12' r='11.25' />
-					<path d='m7.551 10.112a1.5 1.5 0 1 1 1.449 1.888 1.5 1.5 0 1 1 -1.445 1.9' />
-				</g>
-			</svg>
-		),
-	},
-	{
-		name: "Time 60",
-		svg: (
-			<svg viewBox='0 0 24 24' xmlns='http://www\.w3\.org/2000/svg' overflow='visible'>
-				<g fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'>
-					<path d='m9.75 9a2.25 2.25 0 0 0 -2.25 2.25v2.25' />
-					<circle cx='9' cy='13.5' r='1.5' />
-					<path d='m16.5 13.5a1.5 1.5 0 0 1 -3 0v-3a1.5 1.5 0 0 1 3 0z' />
-					<circle cx='12' cy='12' r='11.25' />
-				</g>
 			</svg>
 		),
 	},
