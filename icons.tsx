@@ -28,9 +28,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m12 7.5v9" />
           <path d="m7.5 12h9" />
@@ -50,9 +50,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         >
           <path d="m.75 12h22.5" />
           <path d="m12.75 22.5 10.5-10.5-10.5-10.5" />
@@ -71,9 +71,9 @@ const iconsList = [
         <path
           d="m5.5.75 10.72 10.72a.749.749 0 0 1 0 1.06l-10.72 10.72"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
         />
       </svg>
     ),
@@ -84,9 +84,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m10 21.75a2.087 2.087 0 0 0 4.005 0" />
           <path d="m12 3v-2.25" />
@@ -98,7 +98,11 @@ const iconsList = [
   {
     name: "Bell Bold",
     svg: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        overflow="visible"
+      >
         <path d="M21 17.5a1.5 1.5 0 0 1-1.5-1.5v-4.862A7.957 7.957 0 0 0 13 3.073V1a1 1 0 0 0-2 0v2.073a7.957 7.957 0 0 0-6.5 8.065V16A1.5 1.5 0 0 1 3 17.5a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2zM14.236 21H9.764a.25.25 0 0 0-.248.222 2.319 2.319 0 0 0-.016.278 2.5 2.5 0 1 0 5 0 2.319 2.319 0 0 0-.016-.278.248.248 0 0 0-.248-.222z" />
       </svg>
     ),
@@ -109,12 +113,50 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        >
+          <path d="m12.667 14.136-3.712.531.53-3.713 9.546-9.546a2.25 2.25 0 0 1 3.182 3.182z" />
+          <path d="m19.122 14.25v7.5a1.5 1.5 0 0 1 -1.5 1.5h-15a1.5 1.5 0 0 1 -1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h7.5" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    name: "Calendar",
+    svg: (
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g
+          fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="1.5"
         >
-          <path d="m12.667 14.136-3.712.531.53-3.713 9.546-9.546a2.25 2.25 0 0 1 3.182 3.182z" />
-          <path d="m19.122 14.25v7.5a1.5 1.5 0 0 1 -1.5 1.5h-15a1.5 1.5 0 0 1 -1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h7.5" />
+          <rect height="19.5" rx="1.5" width="22.5" x=".752" y="3.75" />
+          <path d="m.752 9.75h22.5" />
+          <path d="m6.752 6v-5.25" />
+          <path d="m17.252 6v-5.25" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    name: "Gender",
+    svg: (
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        >
+          <path d="m12 6.569a6 6 0 1 1 -7.165-.256" />
+          <path d="m8.25 17.25v6" />
+          <path d="m9.634 13.824a6 6 0 1 1 8.6-.9" />
+          <path d="m17.743 4.992 4.007-4.242" />
+          <path d="m18 .75h3.75v3.75" />
+          <path d="m5.25 20.25h6" />
         </g>
       </svg>
     ),
@@ -124,6 +166,7 @@ const iconsList = [
     svg: (
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
+          stroke="none"
           clip-rule="evenodd"
           d="M15.2 4.2h-5.1c-.4 0-.7.3-.7.7v4.4H5.1c-.4 0-.7.3-.7.7v5c0 .4.3.7.7.7s.7-.3.7-.7v-4.4h4.4c.4 0 .7-.3.7-.7V5.5h4.5c.4 0 .7-.3.7-.7-.2-.3-.5-.6-.9-.6zM8.8 18.7h9.3c.4 0 .7-.3.7-.7V8.6c0-.6-.8-1-1.2-.5l-9.3 9.3c-.5.6-.1 1.3.5 1.3z"
           fill-rule="evenodd"
@@ -132,8 +175,41 @@ const iconsList = [
           d="M12 .9c3.1.1 6.6.4 8.8 2.4 2 2.1 2.4 5.8 2.4 8.7 0 3.1-.4 6.6-2.4 8.7-2.1 2-5.8 2.3-8.8 2.4-3.1-.1-6.6-.4-8.8-2.4C1.2 18.6.8 14.9.8 12c0-3.1.4-6.6 2.4-8.7C5.4 1.3 8.9.9 12 .9z"
           fill="none"
           stroke-miterlimit="10"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
+      </svg>
+    ),
+  },
+  {
+    name: "Flash",
+    svg: (
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m17.848 11.306a1.023 1.023 0 0 0 -.871-1.559h-3.477v-9l-7.348 11.942a1.022 1.022 0 0 0 .871 1.558h3.477v9z"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "Flip Camera",
+    svg: (
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        overflow="visible"
+      >
+        <g fill="none" stroke="#fff" strokeWidth="2">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="m0 11 3 3v-8c0-2.2 1.8-4 4-4h10c2.2 0 4 1.8 4 4m3 7-3-3v8c0 2.2-1.8 4-4 4h-10c-2.2 0-4-1.8-4-4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
       </svg>
     ),
   },
@@ -143,9 +219,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m17.25 12a5.25 5.25 0 1 1 -5.25-5.25 5.25 5.25 0 0 1 5.25 5.25z" />
           <path d="m17.25 12v2.25a3 3 0 0 0 6 0v-2.25a11.249 11.249 0 1 0 -4.5 9" />
@@ -157,10 +233,10 @@ const iconsList = [
     name: "Hash",
     svg: (
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M1 7h22" stroke-width="2" />
-          <path d="M1 17h22" stroke-width="1.978" />
-          <path d="M7 1v22M17 1v22" stroke-width="2" />
+        <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M1 7h22" strokeWidth="2" />
+          <path d="M1 17h22" strokeWidth="1.978" />
+          <path d="M7 1v22M17 1v22" strokeWidth="2" />
         </g>
       </svg>
     ),
@@ -172,9 +248,9 @@ const iconsList = [
         <path
           d="M3.753 13.944v8.25h6v-6a1.5 1.5 0 0 1 1.5-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v6h6v-8.25m-19.5-1.5L10.942 2.255a1.5 1.5 0 0 1 2.122 0l10.189 10.189"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         />
       </svg>
     ),
@@ -182,7 +258,11 @@ const iconsList = [
   {
     name: "Home Bold",
     svg: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        overflow="visible"
+      >
         <path d="M2.643 10.59l9.049-7.483a.483.483 0 0 1 .616 0l9.049 7.483a1.448 1.448 0 0 0 2.066-.222 1.523 1.523 0 0 0-.218-2.111L14.156.774a3.389 3.389 0 0 0-4.312 0L.8 8.257a1.523 1.523 0 0 0-.218 2.111 1.45 1.45 0 0 0 2.061.222z" />
         <path d="M22.281 22v-7a2.225 2.225 0 0 0-.733-1.59l-8.3-7a1.931 1.931 0 0 0-2.494 0l-8.3 7.006A2.224 2.224 0 0 0 1.719 15v7a1.981 1.981 0 0 0 1.958 2h5.386a.99.99 0 0 0 .979-1v-5.5a.991.991 0 0 1 .979-1h1.958a.991.991 0 0 1 .979 1V23a.99.99 0 0 0 .979 1h5.386a1.981 1.981 0 0 0 1.958-2z" />
       </svg>
@@ -194,9 +274,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <rect height="22.5" rx="6" width="22.5" x=".74" y=".75" />
           <circle cx="11.99" cy="12" r="5" />
@@ -212,9 +292,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <circle
             cx="9.813"
@@ -230,12 +310,16 @@ const iconsList = [
   {
     name: "Search Bold",
     svg: (
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        overflow="visible"
+      >
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2.5"
         >
           <circle cx="10" cy="10" r="8.5" />
           <path d="m16.2 16.2 6.4 6.4" />
@@ -249,9 +333,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <circle cx="4.5" cy="19.5" r="3.75" />
           <circle cx="19.5" cy="15" r="3.75" />
@@ -267,9 +351,9 @@ const iconsList = [
         <path
           d="M3 21L21 3m0 18L3 3"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -281,9 +365,9 @@ const iconsList = [
         <path
           d="m0 13.6 7.5 7.4 16.5-18"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -298,9 +382,9 @@ const iconsList = [
       >
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="M17.25 21H6.75a1.5 1.5 0 0 1-1.5-1.5V6h13.5v13.5a1.5 1.5 0 0 1-1.5 1.5zm-7.5-4.5v-6m4.5 6v-6M2.25 6h19.5m-7.5-3h-4.5a1.5 1.5 0 0 0-1.5 1.5V6h7.5V4.5a1.5 1.5 0 0 0-1.5-1.5z" />
         </g>
@@ -312,11 +396,11 @@ const iconsList = [
     svg: (
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
-          stroke-linecap="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeWidth="1.5"
           stroke="inherit"
           fill="none"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         >
           <circle cx="14.25" cy="12.75" r="5.25" />
           <path d="M19.5 6l-1.085-2.171A1.5 1.5 0 0 0 17.073 3h-5.646a1.5 1.5 0 0 0-1.342.829L9 6H2.25a1.5 1.5 0 0 0-1.5 1.5v12a1.5 1.5 0 0 0 1.5 1.5h19.5a1.5 1.5 0 0 0 1.5-1.5v-12a1.5 1.5 0 0 0-1.5-1.5z" />
@@ -355,7 +439,7 @@ const iconsList = [
         <path
           d="m12 1c-6.1 0-11 4.2-11 9.4 0 3.9 2.7 7.2 6.6 8.6v2.2c0 .8.8 1.3 1.5.9l4-2.3c5.6-.5 9.9-4.5 9.9-9.4 0-5.2-4.9-9.4-11-9.4z"
           fill="none"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
       </svg>
     ),
@@ -382,9 +466,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="M12 21.844l-9.588-10a5.672 5.672 0 0 1-1.063-6.551 5.673 5.673 0 0 1 9.085-1.474L12 5.384l1.566-1.565a5.673 5.673 0 0 1 9.085 1.474 5.673 5.673 0 0 1-1.062 6.548z" />
           <path d="M12 5.384l2.937 2.9a.751.751 0 0 1-.249 1.23L9.8 11.473a.751.751 0 0 0-.057 1.368l3.925 1.959a.75.75 0 0 1 .376.908L12 21.844" />
@@ -399,9 +483,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m12.001 3.75v12" />
           <path d="m7.501 11.25 4.5 4.5 4.5-4.5" />
@@ -418,7 +502,7 @@ const iconsList = [
           d="m12 19.42a8.09 8.09 0 0 1 -3 .58 8 8 0 0 1 0-16 8.09 8.09 0 0 1 3 .58"
           fill="none"
           stroke-miterlimit="10"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <circle
           cx="15"
@@ -426,7 +510,7 @@ const iconsList = [
           fill="none"
           r="8"
           stroke-miterlimit="10"
-          stroke-width="1.5"
+          strokeWidth="1.5"
         />
         <ellipse cx="14" cy="9.5" rx="1" ry="1.5" stroke="none" />
         <ellipse cx="19" cy="9.5" rx="1" ry="1.5" stroke="none" />
@@ -440,9 +524,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <rect height="9" rx="1.5" width="9" x=".75" y=".747" />
           <rect height="9" rx="1.5" width="9" x=".75" y="14.247" />
@@ -459,9 +543,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <circle cx="12" cy="12" r="11.25" />
           <path d="m9.289 22.921c-1.522-2.232-2.539-6.288-2.539-10.921s1.017-8.689 2.539-10.921" />
@@ -481,9 +565,9 @@ const iconsList = [
           d="m12 21.844-9.588-10a5.672 5.672 0 0 1 -1.063-6.551 5.673 5.673 0 0 1 9.085-1.474l1.566 1.565 1.566-1.565a5.673 5.673 0 0 1 9.085 1.474 5.673 5.673 0 0 1 -1.062 6.548z"
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         />
       </svg>
     ),
@@ -510,9 +594,9 @@ const iconsList = [
       >
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m11.4 21.2-9-9.3c-1.7-1.7-2.2-4.4-1.1-6.6 1.5-2.8 4.9-3.9 7.7-2.5.5.3 1 .6 1.5 1.1l1.5 1.5 1.6-1.6c2.2-2.2 5.8-2.2 8 0 .4.4.8.9 1.1 1.5.8 1.5.8 3.2.2 4.7" />
           <path d="m15.7 15.7h6c.8 0 1.5.7 1.5 1.5v4.5c0 .8-.7 1.5-1.5 1.5h-6c-.8 0-1.5-.7-1.5-1.5v-4.5c0-.8.7-1.5 1.5-1.5z" />
@@ -528,9 +612,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m7.5 12.004h15.75" />
           <path d="m19.5 15.754 3.75-3.75-3.75-3.75" />
@@ -603,10 +687,10 @@ const iconsList = [
       >
         <path
           d="M2.338 3.255v17.49a1.5 1.5 0 0 0 2.21 1.322l16.322-8.745a1.5 1.5 0 0 0 0-2.644L4.547 1.933a1.5 1.5 0 0 0-2.209 1.322z"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
           fill="none"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
       </svg>
     ),
@@ -618,9 +702,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m22.823 8.611a1.662 1.662 0 0 0 0-2.226c-2.623-2.885-6.792-5.701-10.823-5.634-4.031-.067-8.2 2.749-10.821 5.634a1.663 1.663 0 0 0 0 2.226c2.563 2.824 6.721 5.706 10.821 5.638" />
           <path d="m15.75 7.5a3.75 3.75 0 1 1 -3.75-3.75 3.75 3.75 0 0 1 3.75 3.75z" />
@@ -635,20 +719,15 @@ const iconsList = [
     name: "Report",
     svg: (
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <g
-          fill="none"
-          stroke="inherit"
-          stroke-linecap="round"
-          stroke-width="1.5"
-        >
+        <g fill="none" stroke="inherit" strokeLinecap="round" strokeWidth="1.5">
           <path
             d="m12 18.75a.375.375 0 1 0 .375.375.375.375 0 0 0 -.375-.375z"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
           <path d="m12 15.75v-7.5" stroke-miterlimit="10" />
           <path
             d="m13.621 1.76a1.806 1.806 0 0 0 -3.242 0l-9.473 19.298a1.521 1.521 0 0 0 1.366 2.192h19.456a1.521 1.521 0 0 0 1.366-2.192z"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </g>
       </svg>
@@ -676,9 +755,9 @@ const iconsList = [
         <path
           d="M7 7c2.5-.1 10 0 10 0V3l7.1 9-7.1 9v-5H7c-2.1 0-4.2 2.3-4.2 5-1.9 0-4.2-6.8-.4-11.5C4.3 7.1 5.7 7.1 7 7z"
           fill="none"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           stroke-miterlimit="10"
         />
       </svg>
@@ -691,9 +770,9 @@ const iconsList = [
         <path
           d="m.75 11.75h3.5a1.5 1.5 0 0 0 1.385-.923l2.6-6.115a.75.75 0 0 1 1.4.051l4.734 14.725a.75.75 0 0 0 1.4.051l2.595-6.866a1.5 1.5 0 0 1 1.385-.923h3.5"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         />
       </svg>
     ),
@@ -705,9 +784,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="m15.75 4.5h3.75a1.5 1.5 0 0 1 1.5 1.5v15.75a1.5 1.5 0 0 1 -1.5 1.5h-15a1.5 1.5 0 0 1 -1.5-1.5v-15.75a1.5 1.5 0 0 1 1.5-1.5h3.75a3.75 3.75 0 0 1 7.5 0z" />
           <path d="m12 3.75a.375.375 0 1 1 -.375.375.375.375 0 0 1 .375-.375" />
@@ -728,9 +807,9 @@ const iconsList = [
         <g
           fill="none"
           stroke="inherit"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <circle cx="12" cy="6" r="5.25" />
           <path d="m2.25 23.25a9.75 9.75 0 0 1 19.5 0" />
@@ -741,7 +820,11 @@ const iconsList = [
   {
     name: "User Bold",
     svg: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        overflow="visible"
+      >
         <circle cx="12" cy="6.25" r="5.5" />
         <path d="M12 13.25a9.511 9.511 0 0 0-9.5 9.5.5.5 0 0 0 .5.5h18a.5.5 0 0 0 .5-.5 9.511 9.511 0 0 0-9.5-9.5z" />
       </svg>
@@ -753,9 +836,9 @@ const iconsList = [
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <rect height="13.5" rx="3" width="15" x=".75" y="5.261" />
           <path d="m18.75 15.011 3.415 1.707a.75.75 0 0 0 1.085-.671v-8.073a.749.749 0 0 0 -1.085-.67l-3.415 1.707" />
@@ -796,9 +879,9 @@ const iconsList = [
         <path
           d="M23.2 7.4c0-1.9-1.5-3.4-3.4-3.4H4.2C2.3 4 .7 5.5.7 7.4v9.1c0 1.9 1.5 3.4 3.4 3.4h15.6c1.9 0 3.4-1.5 3.4-3.4V7.4z"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         />
         <path
           stroke="none"
